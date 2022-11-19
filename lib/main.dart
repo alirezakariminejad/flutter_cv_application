@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp();
+  runApp(Application());
 }
-
 
 class Application extends StatelessWidget {
   const Application({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      theme: ThemeData(fontFamily: 'Vazir'),
+      home: Scaffold(
+        backgroundColor: Colors.amber,
+        body: SafeArea(
+          child: Text('این متن نمونه است'),
+        ),
+      ),
+    );
   }
 }
-
