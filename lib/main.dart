@@ -13,117 +13,45 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Vazir'),
       home: Scaffold(
-        appBar: getAppBar(),
+        appBar: _getAppBar(),
         backgroundColor: Colors.amber,
         body: SafeArea(
-          child: getMainBody(),
+          child: _getMainBody(),
         ),
       ),
     );
   }
-}
 
-PreferredSizeWidget getAppBar() {
-  return AppBar(
-    backgroundColor: Colors.red,
-    title: Text('Alireza'),
-    elevation: 2,
-  );
-}
+  PreferredSizeWidget _getAppBar() {
+    return AppBar(
+      backgroundColor: Colors.red,
+      title: Text('Alireza'),
+      elevation: 2,
+    );
+  }
 
-Widget getMainBody() {
-  return SingleChildScrollView(
-    child: Column(
+  Widget _getMainBody() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          _getAvatar(),
+        ],
+      ),
+    );
+  }
+
+  Widget _getAvatar() {
+    return Column(
       children: [
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
-        Text('alireza'),
+        SizedBox(height: 30.0),
+        CircleAvatar(
+          backgroundImage: AssetImage('images/myavatar.jpg'),
+          radius: 100,
+        ),
+        SizedBox(height: 15.0),
+        Text('علیرضا کریمی نژاد هستم. در حال حاضر در حالِ یادگیری فلاتر هستم'),
+        Text('هم اکنون طراح سایت هستم')
       ],
-    ),
-  );
+    );
+  }
 }
