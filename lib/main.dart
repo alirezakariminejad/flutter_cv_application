@@ -14,7 +14,7 @@ class Application extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Vazir'),
       home: Scaffold(
         appBar: _getAppBar(),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: _getMainBody(),
         ),
@@ -49,8 +49,21 @@ class Application extends StatelessWidget {
           radius: 100,
         ),
         SizedBox(height: 15.0),
-        Text('علیرضا کریمی نژاد هستم. در حال حاضر در حالِ یادگیری فلاتر هستم'),
-        Text('هم اکنون طراح سایت هستم')
+        Text(
+          'علیرضا کریمی نژاد هستم. در حال حاضر در حالِ یادگیری فلاتر هستم',
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.w500,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        Text(
+          'هم اکنون طراح سایت هستم',
+          style: TextStyle(
+            fontSize: 16.0,
+          ),
+          textAlign: TextAlign.center,
+        )
       ],
     );
   }
