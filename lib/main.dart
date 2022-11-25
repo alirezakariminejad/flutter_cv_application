@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(Application());
@@ -63,7 +64,120 @@ class Application extends StatelessWidget {
             fontSize: 16.0,
           ),
           textAlign: TextAlign.center,
-        )
+        ),
+        SizedBox(height: 15.0),
+        _getRowIcons()
+      ],
+    );
+  }
+
+  Widget _getRowIcons() {
+    return Wrap(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      runSpacing: 20.0,
+      spacing: 20.0,
+      alignment: WrapAlignment.center,
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareInstagram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareGithub),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareInstagram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareGithub),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareInstagram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareGithub),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareInstagram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareGithub),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareInstagram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.squareGithub),
+          color: Colors.blueGrey,
+        ),
       ],
     );
   }
