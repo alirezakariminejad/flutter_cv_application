@@ -26,7 +26,7 @@ class Application extends StatelessWidget {
   PreferredSizeWidget _getAppBar() {
     return AppBar(
       backgroundColor: Colors.red,
-      title: Text('Alireza'),
+      title: Text('Alireza Kariminejad'),
       elevation: 2,
     );
   }
@@ -66,7 +66,9 @@ class Application extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 15.0),
-        _getRowIcons()
+        _getRowIcons(),
+        SizedBox(height: 15.0),
+        _getSkillsCard(),
       ],
     );
   }
@@ -75,7 +77,7 @@ class Application extends StatelessWidget {
     return Wrap(
       // mainAxisAlignment: MainAxisAlignment.center,
       runSpacing: 20.0,
-      spacing: 20.0,
+      spacing: 10.0,
       alignment: WrapAlignment.center,
       children: [
         IconButton(
@@ -98,86 +100,34 @@ class Application extends StatelessWidget {
           icon: FaIcon(FontAwesomeIcons.squareGithub),
           color: Colors.blueGrey,
         ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.linkedin),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareInstagram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.telegram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareGithub),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.linkedin),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareInstagram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.telegram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareGithub),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.linkedin),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareInstagram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.telegram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareGithub),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.linkedin),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareInstagram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.telegram),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.squareGithub),
-          color: Colors.blueGrey,
-        ),
+      ],
+    );
+  }
+
+  Widget _getSkillsCard() {
+    var skillTitles = ['html', 'css', 'js', 'figma', 'xd', 'ps'];
+    return Wrap(
+      runSpacing: 30.0,
+      spacing: 30.0,
+      children: [
+        for (var skill in skillTitles)
+          Card(
+            child: Column(
+              children: [
+                Container(
+                  height: 80.0,
+                  child: Image(
+                    image: AssetImage('images/$skill.png'),
+                    width: 80.0,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('$skill'),
+                ),
+              ],
+            ),
+          ),
       ],
     );
   }
