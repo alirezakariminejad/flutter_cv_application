@@ -69,6 +69,8 @@ class Application extends StatelessWidget {
         _getRowIcons(),
         SizedBox(height: 15.0),
         _getSkillsCard(),
+        SizedBox(height: 15.0),
+        _getResume()
       ],
     );
   }
@@ -129,6 +131,39 @@ class Application extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+
+  Widget _getResume() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      width: double.infinity,
+      color: Colors.grey[100],
+      child: Column(
+        children: [
+          Text(
+            'سابقه کاری من',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            textDirection: TextDirection.rtl,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(width: double.infinity),
+              Text('طراحی سایت وزارت بهداشت', textDirection: TextDirection.rtl),
+              Text('طراحی سایت علوم پزشکی ایران', textDirection: TextDirection.rtl),
+              Text('طراحی سایت علوم پزشکی تهران', textDirection: TextDirection.rtl),
+              Text('طراحی سایت علوم پزشکی کاشان', textDirection: TextDirection.rtl),
+              Text('طراحی سایت بیمه نوین', textDirection: TextDirection.rtl),
+              Text('...', textDirection: TextDirection.rtl),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
