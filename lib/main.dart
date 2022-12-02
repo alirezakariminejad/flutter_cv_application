@@ -135,6 +135,14 @@ class Application extends StatelessWidget {
   }
 
   Widget _getResume() {
+    var resume = [
+      'طراحی سایت وزارت بهداشت',
+      'طراحی سایت علوم پزشکی ایران',
+      'طراحی سایت علوم پزشکی تهران',
+      'طراحی سایت علوم پزشکی کاشان',
+      'طراحی سایت بیمه نوین',
+      '...'
+    ];
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       width: double.infinity,
@@ -154,12 +162,8 @@ class Application extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(width: double.infinity),
-              Text('طراحی سایت وزارت بهداشت', textDirection: TextDirection.rtl),
-              Text('طراحی سایت علوم پزشکی ایران', textDirection: TextDirection.rtl),
-              Text('طراحی سایت علوم پزشکی تهران', textDirection: TextDirection.rtl),
-              Text('طراحی سایت علوم پزشکی کاشان', textDirection: TextDirection.rtl),
-              Text('طراحی سایت بیمه نوین', textDirection: TextDirection.rtl),
-              Text('...', textDirection: TextDirection.rtl),
+              for (var resumeItem in resume)
+                Text(resumeItem, textDirection: TextDirection.rtl),
             ],
           )
         ],
